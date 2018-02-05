@@ -77,7 +77,7 @@ So let's look closer at the extension, that is located in the .mozilla profile d
 -----
 
 
-So it was now obvious, that something was stolen from the user session in firefox. Could it be our flag?
+So it was now obvious, that something was stolen from the user session in firefox. We see a token, that can be also used for requests. Could it be our flag?
 
 
 -----
@@ -109,6 +109,13 @@ Everything was fixed after the news were updated with post:
 
 
 Now the url isn't active, but the flag was just [there](https://gist.github.com/clipboardstolenthings/).
+And still a request from api.github.com is working:
+
+
+-----
+
+
+`curl -i -H 'Authorization: token 50e833d4ef0d228525f0bef6db857b35f53cd6d6' "https://api.github.com/users/clipboardstolenthings/gists"`
 
 
 -----
