@@ -19,7 +19,7 @@ Flag: `hackim18{'51mpL3st_Ch4ll3ng3_s0lv3d'}`
 
 **Solution**
 
-Откроем pcap с помощью Wireshark
+Откроем `challenge.pcapng` с помощью Wireshark
 
 Посмотрим Statistics -> Protocol Hierarchy
 
@@ -42,6 +42,12 @@ Flag: `hackim18{'51mpL3st_Ch4ll3ng3_s0lv3d'}`
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/binwalk.png)
 
 Внутри архива находим файл `e2fc7ad1c912c04b0247cb9a710e82cd.txt` с содержанием `Flag isn't here!`
+
+Продолжим поиски. Остальные файлы также не сожержат флаг.
+
+Вернемся к `challenge.pcapng` и исследуем другие протоколы.
+DNS и NTP выглядят штатно, а вот ICMP содерржит интересные данные
+
 
 
 
