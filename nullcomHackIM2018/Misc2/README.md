@@ -39,5 +39,10 @@ Flag: `hackim18{'51mpL3st_Ch4ll3ng3_s0lv3d'}`
 
 Выгрузим его с помощью `binwalk` и распакуем
 
+![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/binwalk.png)
+
+Внутри архива находим файл `e2fc7ad1c912c04b0247cb9a710e82cd.txt` с содержанием `Flag isn't here!`
+
+
 
 -----
