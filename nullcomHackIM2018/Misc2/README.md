@@ -1,4 +1,4 @@
-**Задание*
+**Задание**
 
 Find the transferred file
 
