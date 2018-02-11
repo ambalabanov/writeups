@@ -28,7 +28,7 @@ Find the transferred file
 
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/stegdetect.png)
 
-Выгрузим его с помощью `binwalk` и распакуем
+Выгрузим и распакуем его с помощью `binwalk` 
 
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/binwalk.png)
 
