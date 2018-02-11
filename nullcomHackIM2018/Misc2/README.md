@@ -29,9 +29,15 @@ Flag: `hackim18{'51mpL3st_Ch4ll3ng3_s0lv3d'}`
 
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/objects.png)
 
-Интересными показались файлы `follem.JPG` и `metloof.JPG`
+Интересными показались файлы `follem.JPG` и `metloof.JPG` с одинаковой картинкой
 
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/metloof.JPG)
+
+Проверим файлы на вариант стеганографии, `stegdetect` показал, что в файле `metloof.JPG` есть вложенный архив
+
+![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/stegdetect.png)
+
+Выгрузим его с помощью `binwalk` и распакуем
 
 
 -----
