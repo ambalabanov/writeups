@@ -28,7 +28,7 @@ Find the transferred file
 
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/stegdetect.png)
 
-Выгрузим и распакуем его с помощью `binwalk` 
+Выгрузим и распакуем его с помощью `binwalk`
 
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/binwalk.png)
 
@@ -37,6 +37,7 @@ Find the transferred file
 Продолжим поиски. Остальные файлы также не сожержат флаг.
 
 Вернемся к `challenge.pcapng` и исследуем другие протоколы.
+
 DNS и NTP выглядят штатно, а вот в ICMP есть интересные данные
 
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/icmp.png)
@@ -52,6 +53,7 @@ DNS и NTP выглядят штатно, а вот в ICMP есть интер�
 Flag: `hackim18{'51mpL3st_Ch4ll3ng3_s0lv3d'}`
 
 Альтернативное решение с помощью [CyberChef](https://gchq.github.io/CyberChef/)
+
 На вход подаем данные, выгруженные `tshark` и соберем "рецепт"
 
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/cyberchef.png)
