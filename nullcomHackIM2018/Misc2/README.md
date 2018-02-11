@@ -1,15 +1,6 @@
-**Description**
+**Задание*
 
 Find the transferred file
-
-Flag: `hackim18{'51mpL3st_Ch4ll3ng3_s0lv3d'}`
-
-
------
-
-
-**Files**
-
 
 [challenge.pcapng](https://s3.amazonaws.com/hackim18/misc/pcap/challenge.pcapng)
 
@@ -17,7 +8,7 @@ Flag: `hackim18{'51mpL3st_Ch4ll3ng3_s0lv3d'}`
 -----
 
 
-**Solution**
+**Решение**
 
 Откроем `challenge.pcapng` с помощью Wireshark
 
@@ -46,9 +37,24 @@ Flag: `hackim18{'51mpL3st_Ch4ll3ng3_s0lv3d'}`
 Продолжим поиски. Остальные файлы также не сожержат флаг.
 
 Вернемся к `challenge.pcapng` и исследуем другие протоколы.
-DNS и NTP выглядят штатно, а вот ICMP содерржит интересные данные
+DNS и NTP выглядят штатно, а вот в ICMP есть интересные данные
 
+![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/icmp.png)
 
+Выгрузим их с помощью `tshark` и приведем к бинарному виду
+
+`tshark -Y "(data.len==2 ) && (icmp.type == 8)" -T fields  -r challenge.pcapng -e data | xxd -r -p |xxd -r -p > bin.dat`
+
+Полученый файл `bin.dat` оказался архивом, содержащий файл `flag.txt`
+
+![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/tar.png)
+
+Flag: `hackim18{'51mpL3st_Ch4ll3ng3_s0lv3d'}`
+
+Альтернативное решение с помощью [CyberChef](https://gchq.github.io/CyberChef/)
+На вход подаем данные, выгруженные `tshark` и соберем "рецепт"
+
+![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/cyberchef.png)
 
 
 -----
