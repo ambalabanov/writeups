@@ -52,11 +52,10 @@ DNS и NTP выглядят штатно, а вот в ICMP есть интер�
 
 Flag: `hackim18{'51mpL3st_Ch4ll3ng3_s0lv3d'}`
 
+-----
+
 Альтернативное решение с помощью [CyberChef](https://gchq.github.io/CyberChef/)
 
 На вход подаем данные, выгруженные `tshark` и соберем "рецепт"
 
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/cyberchef.png)
-
-
------
