@@ -19,9 +19,19 @@ Flag: `hackim18{'51mpL3st_Ch4ll3ng3_s0lv3d'}`
 
 **Solution**
 
-Open pcap via Wireshark
+Откроем pcap с помощью Wireshark
+
+Посмотрим Statistics -> Protocol Hierarchy
 
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/statistics.jpg)
+
+Видим, что есть обмен по HTTP. Для начала выгрузим файлы, которые передавались
+
+![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/objects.png)
+
+Интересными показались файлы `follem.JPG` и `metloof.JPG`
+
+![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/metloof.JPG)
 
 
 -----
