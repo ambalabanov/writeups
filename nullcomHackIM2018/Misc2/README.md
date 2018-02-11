@@ -46,7 +46,7 @@ DNS и NTP выглядят штатно, а вот в ICMP есть интер�
 
 `tshark -Y "(data.len==2 ) && (icmp.type == 8)" -T fields  -r challenge.pcapng -e data | xxd -r -p |xxd -r -p > bin.dat`
 
-Полученый файл `bin.dat` оказался архивом, содержащий файл `flag.txt`
+Полученый файл `bin.dat` оказался архивом, внутри файл `flag.txt`
 
 ![](https://github.com/ambalabanov/writeups/raw/master/nullcomHackIM2018/Misc2/tar.png)
 
